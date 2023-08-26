@@ -1,6 +1,6 @@
 import requests
 
-apiKey = "7beb253c580f44bcb5d3eacf1acc9e74"
+apiKey = "Place your openWeather API key here"
 cityName = "Chicago"
 amountOfResults = 1
 geoData = None
