@@ -1,7 +1,7 @@
 import requests
 
-apiKey = "Insert your OpenWeather API key here"
-cityName = "Canada"
+apiKey = "Place your openWeather API key here"
+cityName = "Chicago"
 amountOfResults = 1
 
 
