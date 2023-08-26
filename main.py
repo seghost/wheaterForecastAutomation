@@ -1,6 +1,6 @@
 import requests
 
-apiKey = "Put tour openWeather API key here"
+apiKey = "7beb253c580f44bcb5d3eacf1acc9e74"
 cityName = "Chicago"
 amountOfResults = 1
 geoData = None
@@ -16,12 +16,12 @@ if response.status_code == 200:
 else:
     print("Request failed with status code: ", response.status_code)
 
-Url = f"https://api.openweathermap.org/data/2.5/weather?lat={geoData[0]['lat']}&lon={geoData[0]['lon']}&appid={apiKey}"
+Url = f"https://api.openweathermap.org/data/2.5/weather?lat={geoData[0]['lat']}&lon={geoData[0]['lon']}&appid={apiKey}&units=metric"
 
 response = requests.get(Url)
 
 if response.status_code == 200:
     weatherData = response.json()
-    print(weatherData['weather'][0]['description'])
+    print(f"Weather in {cityName} is " + weatherData['weather'][0]['description'] + f" and the temperature is {weatherData['main']['temp']}º celsius")
 else:
     print("Request failed with status code: ", response.status_code)
